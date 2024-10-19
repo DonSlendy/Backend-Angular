@@ -68,6 +68,17 @@ public class UserService implements IUserService{
         return userId;
     }
 
+    @Override
+    public UserModel getByNameAndEmail(UserModel userModel){
+        UserModel user;
+        try {
+            user = iUserRepository.getByNameAndEmail(userModel);
+        }catch (Exception e){
+            throw e;
+        }
+        return user;
+    }
+
     /*
     public UserModel saveUser(UserModel user){
         return userRepository.save(user);

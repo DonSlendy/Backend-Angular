@@ -11,4 +11,6 @@ public interface IUserService {
     public int deleteUser(Long id);
     public int updateUser(UserModel user, Long id);
     public UserModel getUserById(Long id);
+
+    public UserModel getByNameAndEmail(UserModel user);
 }

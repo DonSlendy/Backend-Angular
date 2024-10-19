@@ -11,4 +11,5 @@ public interface IUserRepository{
     public int updateUser(UserModel userModel, Long id);
     public UserModel getUserById(Long id);
     public UserModel getByName(String user);
+    public UserModel getByNameAndEmail(UserModel userModel);
 }

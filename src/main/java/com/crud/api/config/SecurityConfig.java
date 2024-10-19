@@ -27,7 +27,7 @@ public class SecurityConfig {
                 .cors(withDefaults())
                 .csrf(crf -> crf.disable())
                 .authorizeHttpRequests((authorize)->authorize
-                        .requestMatchers("api/auth/**").permitAll()
+                        .requestMatchers("api/auth/**","api/email/**").permitAll()
                         .requestMatchers("api/admin/**").hasRole("ADMIN") // Solo accesible para administradores
                         .anyRequest().authenticated()
                 )
